@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salome — Software Developer | Contact</title>
+    
+    <!-- Third-Party CSS Stylesheet Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Pre-apply theme attributes before page parsing -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Three.js Ambient Particle Backdrop -->
+    <div id="particles-canvas-container"></div>
+    
+    <!-- Mouse Hover Spotlight Gradient -->
+    <div id="mouse-spotlight"></div>
+
+    <!-- Global Top Navigation Header -->
+    <header class="luxury-navbar">
+        <div class="container h-100 d-flex justify-content-between align-items-center">
+            <a href="index.html" class="nav-brand">SALOME<span>.</span></a>
+            
+            <ul class="nav-links-wrap">
+                <li><a href="index.html#about" class="nav-anchor">About</a></li>
+                <li><a href="journey.html" class="nav-anchor">Journey</a></li>
+                <li><a href="skills.html" class="nav-anchor">Skills</a></li>
+                <li><a href="projects.html" class="nav-anchor">Projects</a></li>
+                <li><a href="certifications.html" class="nav-anchor">Certifications</a></li>
+                <li><a href="contact.html" class="nav-anchor active">Contact</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="mobile-nav-toggle-btn" id="mobile-nav-toggle" aria-label="Toggle Mobile Navigation Drawer">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay Drawer -->
+    <nav class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <ul class="mobile-overlay-links">
+            <li><a href="index.html#about" class="mobile-overlay-link">About</a></li>
+            <li><a href="journey.html" class="mobile-overlay-link">Journey</a></li>
+            <li><a href="skills.html" class="mobile-overlay-link">Skills</a></li>
+            <li><a href="projects.html" class="mobile-overlay-link">Projects</a></li>
+            <li><a href="certifications.html" class="mobile-overlay-link">Certifications</a></li>
+            <li><a href="contact.html" class="mobile-overlay-link active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container (AJAX Swappable) -->
+    <main class="page-wrapper">
+        <div id="page-content">
+            <div class="container">
+                <!-- Page Unique Hero Header -->
+                <div class="row pt-5 pb-4">
+                    <div class="col-12">
+                        <span class="hero-greeting">// Communication Hub</span>
+                        <h1 class="hero-name" style="font-size: clamp(35px, 6vw, 75px); margin-bottom: 0;">Contact</h1>
+                        <p class="subtitle-large text-muted">Get In Touch and Start a Conversation</p>
+                    </div>
+                </div>
+
+                <section class="py-4">
+                    <div class="row g-5 align-items-stretch">
+                        
+                        <!-- Left: Contact Form -->
+                        <div class="col-lg-7">
+                            <div class="contact-form-card">
+                                <h3 class="font-serif text-white fs-5 mb-4">Get In Touch</h3>
+                                <form id="contact-form" novalidate>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="form-name" placeholder="Name" required>
+                                                <label for="form-name">Name</label>
+                                                <div class="invalid-feedback font-mono" style="font-size: 0.7rem;">Name is required.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" id="form-email" placeholder="Email" required>
+                                                <label for="form-email">Email Address</label>
+                                                <div class="invalid-feedback font-mono" style="font-size: 0.7rem;">Valid email is required.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="form-subject" placeholder="Subject" required>
+                                                <label for="form-subject">Subject</label>
+                                                <div class="invalid-feedback font-mono" style="font-size: 0.7rem;">Subject is required.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" id="form-message" placeholder="Your Message" style="height: 140px" required></textarea>
+                                                <label for="form-message">Your Message</label>
+                                                <div class="invalid-feedback font-mono" style="font-size: 0.7rem;">Message cannot be empty.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <button type="submit" class="btn-premium btn-premium-accent w-100 py-3">Send Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Right: Information Links -->
+                        <div class="col-lg-5">
+                            <div class="contact-sidebar h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="font-serif text-white fs-5 mb-4">// Direct Channels</h3>
+                                    
+                                    <a href="https://www.linkedin.com/in/salome-vulluri/" target="_blank" class="contact-link-item">
+                                        <div class="contact-circle-icon"><i class="fab fa-linkedin-in"></i></div>
+                                        <div>
+                                            <div style="font-weight:600; font-size:0.95rem;">LinkedIn</div>
+                                            <div class="text-muted font-mono" style="font-size: 0.8rem;">linkedin.com/in/salome-vulluri</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="https://github.com/salome2805" target="_blank" class="contact-link-item">
+                                        <div class="contact-circle-icon"><i class="fab fa-github"></i></div>
+                                        <div>
+                                            <div style="font-weight:600; font-size:0.95rem;">GitHub</div>
+                                            <div class="text-muted font-mono" style="font-size: 0.8rem;">github.com/salome2805</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="mailto:salomevulluri.28@gmail.com" class="contact-link-item">
+                                        <div class="contact-circle-icon"><i class="fas fa-envelope"></i></div>
+                                        <div>
+                                            <div style="font-weight:600; font-size:0.95rem;">Email</div>
+                                            <div class="text-muted font-mono" style="font-size: 0.8rem;">salomevulluri.28@gmail.com</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="https://www.credly.com/users/salome-vulluri" target="_blank" class="contact-link-item">
+                                        <div class="contact-circle-icon"><i class="fas fa-award"></i></div>
+                                        <div>
+                                            <div style="font-weight:600; font-size:0.95rem;">Credly Badges</div>
+                                            <div class="text-muted font-mono" style="font-size: 0.8rem;">credly.com/users/salome-vulluri</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="pt-4 border-top border-secondary border-opacity-25">
+                                    <h4 class="font-serif text-white fs-6 mb-2">Professional Collaboration</h4>
+                                    <p class="text-muted mb-0" style="font-size: 0.85rem; line-height:1.6;">
+                                        Open to software developer roles, research projects, data engineering tasks, and collaborative machine learning initiatives. Feel free to reach out.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Transmit Notification Success alert popup -->
+    <div class="success-transmission-alert" id="transmission-alert">
+        <div style="font-weight: 700; font-size: 0.9rem;" class="mb-1"><i class="fas fa-check-circle" style="color:var(--accent-highlight)"></i> Success</div>
+        <div class="text-muted" style="font-size: 0.75rem; line-height: 1.4;">
+            Your message has been processed successfully. I will get back to you soon.
+        </div>
+    </div>
+
+    <!-- Page Transition Swipe Overlay -->
+    <div id="transition-overlay">
+        <div class="spinner-border text-danger" role="status"></div>
+    </div>
+
+    <!-- Luxury Global Footer -->
+    <footer class="luxury-footer">
+        <div class="container text-center">
+            <div class="mb-3 d-flex justify-content-center gap-4 fs-5">
+                <a href="https://www.linkedin.com/in/salome-vulluri/" target="_blank" class="text-secondary" aria-label="LinkedIn Profile Link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/salome2805" target="_blank" class="text-secondary" aria-label="GitHub Profile Link"><i class="fab fa-github"></i></a>
+                <a href="mailto:salomevulluri.28@gmail.com" class="text-secondary" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.credly.com/users/salome-vulluri" target="_blank" class="text-secondary" aria-label="Credly Badges Link"><i class="fas fa-award"></i></a>
+            </div>
+            <p class="mb-2">SALOME &copy; 2026. ALL RIGHTS RESERVED.</p>
+            <p class="text-muted font-mono mb-0" style="font-size: 0.75rem; letter-spacing: 0.05em;">DESIGNED FOR EXCELLENCE // B.TECH AI & DATA SCIENCE</p>
+        </div>
+    </footer>
+
+    <!-- Third-Party Library Script Links -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom Main Controller -->
+    <script src="js/main.js"></script>
+</body>
+</html>

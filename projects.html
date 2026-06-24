@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salome — Software Developer | Projects</title>
+    
+    <!-- Third-Party CSS Stylesheet Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Pre-apply theme attributes before page parsing -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Three.js Ambient Particle Backdrop -->
+    <div id="particles-canvas-container"></div>
+    
+    <!-- Mouse Hover Spotlight Gradient -->
+    <div id="mouse-spotlight"></div>
+
+    <!-- Global Top Navigation Header -->
+    <header class="luxury-navbar">
+        <div class="container h-100 d-flex justify-content-between align-items-center">
+            <a href="index.html" class="nav-brand">SALOME<span>.</span></a>
+            
+            <ul class="nav-links-wrap">
+                <li><a href="index.html#about" class="nav-anchor">About</a></li>
+                <li><a href="journey.html" class="nav-anchor">Journey</a></li>
+                <li><a href="skills.html" class="nav-anchor">Skills</a></li>
+                <li><a href="projects.html" class="nav-anchor active">Projects</a></li>
+                <li><a href="certifications.html" class="nav-anchor">Certifications</a></li>
+                <li><a href="contact.html" class="nav-anchor">Contact</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="mobile-nav-toggle-btn" id="mobile-nav-toggle" aria-label="Toggle Mobile Navigation Drawer">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay Drawer -->
+    <nav class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <ul class="mobile-overlay-links">
+            <li><a href="index.html#about" class="mobile-overlay-link">About</a></li>
+            <li><a href="journey.html" class="mobile-overlay-link">Journey</a></li>
+            <li><a href="skills.html" class="mobile-overlay-link">Skills</a></li>
+            <li><a href="projects.html" class="mobile-overlay-link active">Projects</a></li>
+            <li><a href="certifications.html" class="mobile-overlay-link">Certifications</a></li>
+            <li><a href="contact.html" class="mobile-overlay-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container (AJAX Swappable) -->
+    <main class="page-wrapper">
+        <div id="page-content">
+            <div class="container">
+                <!-- Page Unique Hero Header -->
+                <div class="row pt-5 pb-4">
+                    <div class="col-12">
+                        <span class="hero-greeting">// Engineering Showcases</span>
+                        <h1 class="hero-name" style="font-size: clamp(35px, 6vw, 75px); margin-bottom: 0;">Projects</h1>
+                        <p class="subtitle-large text-muted">Featured Work and Open-Source Codebases</p>
+                    </div>
+                </div>
+
+                <section class="py-4">
+                    
+                    <!-- Featured Project 1 -->
+                    <div class="project-showcase-card rounded-0 overflow-hidden fade-in-up">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="project-img-container">
+                                    <svg class="w-75 h-75" viewBox="0 0 160 90" fill="none" style="filter: drop-shadow(0 0 10px rgba(128, 0, 32, 0.25));">
+                                        <rect width="160" height="90" rx="4" fill="#0D0D0D" stroke="rgba(255,255,255,0.05)" />
+                                        <circle cx="80" cy="45" r="20" stroke="#800020" stroke-width="1.5" />
+                                        <path d="M50 45 H 110" stroke="#C0395B" stroke-width="1" stroke-dasharray="3 3" />
+                                        <circle cx="50" cy="45" r="3" fill="#800020" />
+                                        <circle cx="110" cy="45" r="3" fill="#C0395B" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="project-info-container h-100">
+                                    <span class="project-meta-details">AI Conversational Agent</span>
+                                    <h3 class="font-serif text-white fs-4 mt-2 mb-3">HIA – Health Insights Agent</h3>
+                                    <p class="body-large mb-3" style="font-size:0.9rem;">
+                                        Blood report parsing chatbot. Transmits unstructured health documents into vector indexes, logs search inquiries, and answers clinical queries.
+                                    </p>
+                                    <ul class="project-features-list">
+                                        <li>Supabase database configurations & secure vaults</li>
+                                        <li>FAISS semantic index caching for report histories</li>
+                                        <li>Groq API + Hugging Face language model integrations</li>
+                                    </ul>
+                                    <div class="project-tags mb-4">
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">Streamlit</span>
+                                        <span class="tech-badge">LangChain</span>
+                                        <span class="tech-badge">Supabase</span>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/salome2805" target="_blank" class="btn-premium btn-premium-outline px-4 py-2">Codebase <i class="fab fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Project 2 -->
+                    <div class="project-showcase-card rounded-0 overflow-hidden fade-in-up">
+                        <div class="row g-0 flex-row-reverse">
+                            <div class="col-lg-6">
+                                <div class="project-img-container">
+                                    <svg class="w-75 h-75" viewBox="0 0 160 90" fill="none" style="filter: drop-shadow(0 0 10px rgba(128, 0, 32, 0.25));">
+                                        <rect width="160" height="90" rx="4" fill="#0D0D0D" stroke="rgba(255,255,255,0.05)" />
+                                        <path d="M30 65 L 60 30 L 90 50 L 130 20" stroke="#800020" stroke-width="2" />
+                                        <circle cx="60" cy="30" r="3" fill="#C0395B" />
+                                        <circle cx="90" cy="50" r="3" fill="#C0395B" />
+                                        <circle cx="130" cy="20" r="3" fill="#C0395B" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="project-info-container h-100">
+                                    <span class="project-meta-details">Machine Learning / Computer Vision</span>
+                                    <h3 class="font-serif text-white fs-4 mt-2 mb-3">Real-Time Plant Stress Detection</h3>
+                                    <p class="body-large mb-3" style="font-size:0.9rem;">
+                                        Agricultural analyzer detecting water stress on crop leaves. Integrates image processors with classification engines to assess agricultural index status.
+                                    </p>
+                                    <ul class="project-features-list">
+                                        <li>Real-time leaf stress indexing telemetry</li>
+                                        <li>IoT sensory inputs pipelines compilation</li>
+                                        <li>Machine learning image classifier weights deployment</li>
+                                    </ul>
+                                    <div class="project-tags mb-4">
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">Scikit-Image</span>
+                                        <span class="tech-badge">Scikit-Learn</span>
+                                        <span class="tech-badge">IoT Core</span>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/salome2805" target="_blank" class="btn-premium btn-premium-outline px-4 py-2">Codebase <i class="fab fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Project 3 -->
+                    <div class="project-showcase-card rounded-0 overflow-hidden fade-in-up">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="project-img-container">
+                                    <svg class="w-75 h-75" viewBox="0 0 160 90" fill="none" style="filter: drop-shadow(0 0 10px rgba(128, 0, 32, 0.25));">
+                                        <rect width="160" height="90" rx="4" fill="#0D0D0D" stroke="rgba(255,255,255,0.05)" />
+                                        <circle cx="45" cy="45" r="15" stroke="#800020" stroke-width="1.5" />
+                                        <circle cx="115" cy="45" r="15" stroke="#C0395B" stroke-width="1.5" />
+                                        <path d="M45 45 Q 80 15 115 45" stroke="#800020" fill="none" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="project-info-container h-100">
+                                    <span class="project-meta-details">Personalized digital twin</span>
+                                    <h3 class="font-serif text-white fs-4 mt-2 mb-3">MirrorGPT – AI Assistant</h3>
+                                    <p class="body-large mb-3" style="font-size:0.9rem;">
+                                        Digital twin system utilizing custom memory databases. Emits smart query returns mapped to customized NLP search weights.
+                                    </p>
+                                    <ul class="project-features-list">
+                                        <li>ChromaDB semantic vector storage integration</li>
+                                        <li>OpenAI API integration for conversation synthesis</li>
+                                        <li>Context-aware agent memory-vault architectures</li>
+                                    </ul>
+                                    <div class="project-tags mb-4">
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">ChromaDB</span>
+                                        <span class="tech-badge">OpenAI API</span>
+                                        <span class="tech-badge">RAG</span>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/salome2805" target="_blank" class="btn-premium btn-premium-outline px-4 py-2">Codebase <i class="fab fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Project 4 -->
+                    <div class="project-showcase-card rounded-0 overflow-hidden fade-in-up">
+                        <div class="row g-0 flex-row-reverse">
+                            <div class="col-lg-6">
+                                <div class="project-img-container">
+                                    <svg class="w-75 h-75" viewBox="0 0 160 90" fill="none" style="filter: drop-shadow(0 0 10px rgba(128, 0, 32, 0.25));">
+                                        <rect width="160" height="90" rx="4" fill="#0D0D0D" stroke="rgba(255,255,255,0.05)" />
+                                        <rect x="35" y="30" width="30" height="30" stroke="#800020" />
+                                        <rect x="95" y="30" width="30" height="30" stroke="#C0395B" />
+                                        <line x1="65" y1="45" x2="95" y2="45" stroke="#800020" stroke-width="1.5" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="project-info-container h-100">
+                                    <span class="project-meta-details">Data Classification Model</span>
+                                    <h3 class="font-serif text-white fs-4 mt-2 mb-3">Human Activity Recognition</h3>
+                                    <p class="body-large mb-3" style="font-size:0.9rem;">
+                                        Classifier mapping smartphone sensor statistics. Trains machine learning classifiers to determine user walking, running, and resting metrics.
+                                    </p>
+                                    <ul class="project-features-list">
+                                        <li>High-accuracy multiclass models evaluation</li>
+                                        <li>Smartphone sensor data pre-processing scripts</li>
+                                        <li>Pandas statistical metrics analysis</li>
+                                    </ul>
+                                    <div class="project-tags mb-4">
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">Scikit-Learn</span>
+                                        <span class="tech-badge">Pandas</span>
+                                        <span class="tech-badge">NumPy</span>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/salome2805" target="_blank" class="btn-premium btn-premium-outline px-4 py-2">Codebase <i class="fab fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Projects -->
+                    <h3 class="font-serif text-white fs-5 mt-5 mb-4">// Additional Works</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="additional-project-box">
+                                <div>
+                                    <span class="text-muted font-mono" style="font-size: 0.7rem;">[ PROJECT_LUNA ]</span>
+                                    <h4 class="font-serif text-white fs-6 mt-1 mb-3">Luna Merchant Agent</h4>
+                                    <p class="body-large" style="font-size:0.8rem;">AI billing widget streamlining shop owner operations.</p>
+                                </div>
+                                <a href="https://github.com/salome2805" target="_blank" class="text-decoration-none font-mono" style="font-size:0.75rem; color:#C0395B !important;">Open Repository &rarr;</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="additional-project-box">
+                                <div>
+                                    <span class="text-muted font-mono" style="font-size: 0.7rem;">[ PROJECT_LUCY ]</span>
+                                    <h4 class="font-serif text-white fs-6 mt-1 mb-3">Lucy Virtual Engine</h4>
+                                    <p class="body-large" style="font-size:0.8rem;">Personal voice speech-recognition virtual assistant.</p>
+                                </div>
+                                <a href="https://github.com/salome2805" target="_blank" class="text-decoration-none font-mono" style="font-size:0.75rem; color:#C0395B !important;">Open Repository &rarr;</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="additional-project-box">
+                                <div>
+                                    <span class="text-muted font-mono" style="font-size: 0.7rem;">[ PROJECT_JOB ]</span>
+                                    <h4 class="font-serif text-white fs-6 mt-1 mb-3">Digital Job Portal</h4>
+                                    <p class="body-large" style="font-size:0.8rem;">Web portal matching candidate skills with company jobs.</p>
+                                </div>
+                                <a href="https://github.com/salome2805" target="_blank" class="text-decoration-none font-mono" style="font-size:0.75rem; color:#C0395B !important;">Open Repository &rarr;</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="additional-project-box">
+                                <div>
+                                    <span class="text-muted font-mono" style="font-size: 0.7rem;">[ PROJECT_REST ]</span>
+                                    <h4 class="font-serif text-white fs-6 mt-1 mb-3">Restaurant System</h4>
+                                    <p class="body-large" style="font-size:0.8rem;">Billing and reservation MySQL backend portal.</p>
+                                </div>
+                                <a href="https://github.com/salome2805" target="_blank" class="text-decoration-none font-mono" style="font-size:0.75rem; color:#C0395B !important;">Open Repository &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Page Transition Swipe Overlay -->
+    <div id="transition-overlay">
+        <div class="spinner-border text-danger" role="status"></div>
+    </div>
+
+    <!-- Luxury Global Footer -->
+    <footer class="luxury-footer">
+        <div class="container text-center">
+            <div class="mb-3 d-flex justify-content-center gap-4 fs-5">
+                <a href="https://www.linkedin.com/in/salome-vulluri/" target="_blank" class="text-secondary" aria-label="LinkedIn Profile Link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/salome2805" target="_blank" class="text-secondary" aria-label="GitHub Profile Link"><i class="fab fa-github"></i></a>
+                <a href="mailto:salomevulluri.28@gmail.com" class="text-secondary" aria-label="Send Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.credly.com/users/salome-vulluri" target="_blank" class="text-secondary" aria-label="Credly Badges Link"><i class="fas fa-award"></i></a>
+            </div>
+            <p class="mb-2">SALOME &copy; 2026. ALL RIGHTS RESERVED.</p>
+            <p class="text-muted font-mono mb-0" style="font-size: 0.75rem; letter-spacing: 0.05em;">DESIGNED FOR EXCELLENCE // B.TECH AI & DATA SCIENCE</p>
+        </div>
+    </footer>
+
+    <!-- Third-Party Library Script Links -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom Main Controller -->
+    <script src="js/main.js"></script>
+</body>
+</html>
